@@ -36,7 +36,15 @@ STATEMENT_SCHEMA = {
         "interest_charged": {"type": ["number", "null"]},
         "top_merchants": {"type": "array", "items": {"type": "string"}},
     },
-    "required": ["total_balance", "minimum_payment"],
+    "required": [
+        "card_last4",
+        "statement_date",
+        "payment_due_date",
+        "total_balance",
+        "minimum_payment",
+        "interest_charged",
+        "top_merchants",
+    ],
     "additionalProperties": False,
 }
 
