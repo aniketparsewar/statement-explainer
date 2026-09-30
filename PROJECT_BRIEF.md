@@ -18,12 +18,12 @@ statement PDF. Ship it to GitHub as the first portfolio project.
 ## Weekend task list
 
 ### Day 1 — Make it work
-- [ ] Python env + `pip install -r requirements.txt`
-- [ ] `.env` with `OPENAI_API_KEY` (platform.openai.com/api-keys)
-- [ ] Run `python main.py <statement.pdf> --question "What is my total balance?"`
-- [ ] Run `python main.py <statement.pdf> --extract`
-- [ ] Read `src/llm.py` until you can explain every parameter of the API call
-- [ ] Note the token/cost line after each call — build the cost instinct early
+- [x] Python env + `pip install -r requirements.txt`
+- [x] `.env` with `OPENAI_API_KEY` (platform.openai.com/api-keys)
+- [x] Run `python main.py <statement.pdf> --question "What is my total balance?"`
+- [x] Run `python main.py <statement.pdf> --extract`
+- [x] Read `src/llm.py` until you can explain every parameter of the API call
+- [x] Note the token/cost line after each call — build the cost instinct early
 
 ### Day 2 — Make it yours (the actual learning)
 - [ ] Exercise 1 in `src/prompts.py`: rewrite SYSTEM_QA to show its math
