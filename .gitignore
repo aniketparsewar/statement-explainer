@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Never commit real statements — use redacted samples for demos
+*.pdf
+.streamlit/
