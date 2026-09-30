@@ -12,6 +12,13 @@ statement provided. Rules:
 - If question is about a merchant, list every matching transaction with date and amount from the statement.
 - If question is about interest, show each calculation step using ONLY numbers from the statement. If the statement doesn't include the rate or balances used, say exactly which inputs are missing instead of estimating them."""
 
+SYSTEM_QA_PDF = """You are a helpful credit card statement assistant. Answer questions about the
+attached statement PDF. Rules:
+- Answer ONLY from the statement. If the answer isn't in it, say so plainly.
+- Quote the exact numbers you rely on.
+- Keep answers short and plain — no jargon.
+- If question is about a merchant, list every matching transaction with date and amount.
+- If question is about interest, show each calculation step using ONLY numbers from the statement. If the statement doesn't include the rate or balances used, say exactly which inputs are missing instead of estimating them."""
 
 def build_qa_prompt(statement_text: str, question: str) -> str:
     return f"""STATEMENT:

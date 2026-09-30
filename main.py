@@ -20,6 +20,15 @@ def cmd_ask(pdf_path: str, question: str):
         f"~${result['cost_usd']:.4f}]"
     )
 
+def cmd_direct_pdf(pdf_path: str, question: str):
+    print(f"Sending {pdf_path} directly to the model (no text extraction)\n")
+    result = llm.ask_with_pdf(prompts.SYSTEM_QA_PDF, question, pdf_path)
+    print(result["answer"])
+    print(
+        f"\n[tokens: {result['input_tokens']} in / {result['output_tokens']} out | "
+        f"~${result['cost_usd']:.4f}]"
+    )
+
 
 def cmd_extract(pdf_path: str):
     text, pages = pdf_reader.extract_text(pdf_path)
@@ -44,10 +53,14 @@ def main():
     parser.add_argument("--question", "-q", help="Question to ask about the statement")
     parser.add_argument("--extract", action="store_true",
                         help="Extract key facts as JSON")
+    parser.add_argument("--direct-pdf", action="store_true",
+                        help="Send the PDF itself to the model instead of extracted text")
     args = parser.parse_args()
 
     if args.extract:
         cmd_extract(args.pdf)
+    elif args.question and args.direct_pdf:
+        cmd_direct_pdf(args.pdf, args.question)
     elif args.question:
         cmd_ask(args.pdf, args.question)
     else:

@@ -56,3 +56,30 @@ def extract_json(system_prompt: str, user_prompt: str, schema: dict) -> dict:
         "output_tokens": usage.completion_tokens,
         "cost_usd": costs.estimate_cost(usage.prompt_tokens, usage.completion_tokens),
     }
+
+import base64
+
+def ask_with_pdf(system_prompt: str, question: str, pdf_path: str) -> dict:
+    with open(pdf_path, "rb") as f:
+        b64 = base64.b64encode(f.read()).decode()
+    resp = config.get_client().chat.completions.create(
+        model=config.MODEL,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": [
+                {"type": "text", "text": question},
+                {"type": "file", "file": {
+                    "filename": "statement.pdf",
+                    "file_data": f"data:application/pdf;base64,{b64}",
+                }},
+            ]},
+        ],
+        temperature=0.2,
+    )
+    usage = resp.usage
+    return {
+        "answer": resp.choices[0].message.content,
+        "input_tokens": usage.prompt_tokens,
+        "output_tokens": usage.completion_tokens,
+        "cost_usd": costs.estimate_cost(usage.prompt_tokens, usage.completion_tokens),
+    }
