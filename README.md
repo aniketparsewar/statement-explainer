@@ -7,7 +7,7 @@ python main.py statement.pdf --question "Why did my interest charge go up?"
 python main.py statement.pdf --extract   # key facts as structured JSON
 ```
 
-Project 1 of the [AI Engineer in 3 Months](..) track. The goal isn't the app —
+The goal isn't the app —
 it's learning how LLM apps actually work: prompts, structured output, tokens, cost.
 
 ## Setup
