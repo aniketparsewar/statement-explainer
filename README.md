@@ -44,10 +44,10 @@ understand what frameworks are abstracting.
 
 ## Exercises completed
 
-- [ ] Rewrote SYSTEM_QA to show its math on interest questions
-- [ ] Added merchant-transaction listing rule
-- [ ] Compared temperature 0.2 vs 0.7 on ambiguous questions
-- [ ] Extended extraction schema with rewards points
+- [x] Rewrote SYSTEM_QA to show its math on interest questions
+- [x] Added merchant-transaction listing rule
+- [x] Compared temperature 0.2 vs 0.7 on ambiguous questions
+- [x] Extended extraction schema with rewards points
 
 ## Privacy note
 

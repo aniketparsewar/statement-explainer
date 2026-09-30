@@ -43,7 +43,7 @@ def extract_json(system_prompt: str, user_prompt: str, schema: dict) -> dict:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ],
-        temperature=0.0,
+        temperature=0.2,
         response_format={
             "type": "json_schema",
             "json_schema": {"name": "extraction", "schema": schema, "strict": True},

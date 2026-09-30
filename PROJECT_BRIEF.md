@@ -26,20 +26,20 @@ statement PDF. Ship it to GitHub as the first portfolio project.
 - [x] Note the token/cost line after each call — build the cost instinct early
 
 ### Day 2 — Make it yours (the actual learning)
-- [ ] Exercise 1 in `src/prompts.py`: rewrite SYSTEM_QA to show its math
-- [ ] Exercise 2: merchant-transaction listing rule
-- [ ] Exercise 3: temperature 0.2 vs 0.7 experiment — write down what broke
-- [ ] Exercise 4: extend the extraction schema, re-run `--extract`
-- [ ] Break it on purpose: ask a question the statement can't answer.
+- [x] Exercise 1 in `src/prompts.py`: rewrite SYSTEM_QA to show its math
+- [x] Exercise 2: merchant-transaction listing rule
+- [x] Exercise 3: temperature 0.2 vs 0.7 experiment — write down what broke
+- [x] Exercise 4: extend the extraction schema, re-run `--extract`
+- [x] Break it on purpose: ask a question the statement can't answer.
       Does it hallucinate or say "not in the statement"? Fix the prompt until it refuses.
-- [ ] `git init`, first commits, push to GitHub (see README)
-- [ ] Fill in the "What I learned" section of the README honestly
+- [x] `git init`, first commits, push to GitHub (see README)
+- [x] Fill in the "What I learned" section of the README honestly
 
 ## Done means
-- [ ] Both commands work on a real statement
-- [ ] README documents setup, structure, and learnings
-- [ ] Repo is public on GitHub with a clean commit history
-- [ ] You can explain: tokens, temperature, structured output, why prompts live
+- [x] Both commands work on a real statement
+- [x] README documents setup, structure, and learnings
+- [x] Repo is public on GitHub with a clean commit history
+- [x] You can explain: tokens, temperature, structured output, why prompts live
       in one file, and roughly what each call costs
 
 ## Stretch (only if Day 2 finishes early)
